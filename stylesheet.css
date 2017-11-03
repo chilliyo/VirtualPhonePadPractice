@@ -11,9 +11,18 @@
 .num
 {
     height: 80px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
 }
 .txt
 {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 28px;
+}
+._span
+{
+    width: 80px;
+    float: left;
+    margin: 0 3px 5px 5px;
 }
