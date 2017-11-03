@@ -1,0 +1,19 @@
+.phone
+{
+    margin-top: 15px;
+    background: #fff;
+}
+.num-pad
+{
+    padding-left: 15px;
+}
+
+.num
+{
+    height: 80px;
+}
+.txt
+{
+    text-align: center;
+    margin-top: 20px;
+}
