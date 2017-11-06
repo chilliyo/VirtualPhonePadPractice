@@ -10,8 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4 phone">
+            <div class="col-md-12 phone">
                 <input type="tel" name="name" id="dailNum" class="form-control tel" value="" />
                 <div class="num-pad">
                     <div class="row">
@@ -83,19 +82,52 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="border border-dark num rounded-circle _span">
+                                <div class ="txt">
+                                    *
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="border border-dark num rounded-circle _span">
+                                <div class ="txt">
+                                    0
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="border border-dark num rounded-circle _span">
+                                <div class ="txt">
+                                    #
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="_button">
+                    <button type="button" class="btn btn-success">Call</button>
                 </div>
             </div>
-        </div>
+
     </div>
     <script type="text/javascript">
+        var dailNum;
+        var text;
         $(document).ready(function () {
             $('.num').click(function () {
                 var num = $(this);
-                var text = $.trim(num.find('.txt').clone().children().remove().end().text());
-                var dailNum = $('#dailNum');
+                text = $.trim(num.find('.txt').clone().children().remove().end().text());
+                dailNum = $('#dailNum');
                 $(dailNum).val(dailNum.val() + text);
             });
 
+            $('._button').click(function () {
+                var dailNum_str = "";
+                dailNum_str = "You dialed number: " + dailNum.val();
+                alert(dailNum_str);
+            });
         });
     </script>
 </body>
